@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-"""Bundle each plugin collection into one zip that claude.ai accepts as a Skill.
+"""Bundle the skills into zips that claude.ai accepts as ONE Skill each.
 
-claude.ai takes one zip per Skill, with the skill folder as the zip root and a
-SKILL.md at its top. Uploading all 107 skills individually would mean 107 trips
-through the upload dialog and ~10k tokens of always-loaded metadata, so instead
-each collection becomes a single Skill: a router SKILL.md that lists what the
-collection covers, with the original skills kept alongside it as files Claude
-reads on demand (progressive disclosure).
+claude.ai takes one zip per Skill, uploaded by hand, and treats every SKILL.md
+it finds in the zip as a separate Skill. So a bundle has to contain exactly one
+SKILL.md at the zip root; the skills it bundles ride along as plain .md files
+under reference/, which the router SKILL.md points at and Claude reads on demand
+(progressive disclosure). Naming them anything other than SKILL.md is what keeps
+the importer from unpacking them into separate uploads.
 
-Writes dist/claude-ai/<collection>.zip. Re-run after editing any SKILL.md.
+Builds two shapes:
+  dist/claude-ai/all-in-one/designer-skills.zip   1 upload,  all 107 skills
+  dist/claude-ai/by-collection/<name>.zip         9 uploads, one per collection
+
+Re-run after editing any SKILL.md.
 """
 
 import json
@@ -25,9 +29,11 @@ COLLECTIONS = [
     "designer-toolkit", "visual-critique",
 ]
 
-FM = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.S)
+# claude.ai upload limits that actually bite.
+MAX_FILES = 200
+MAX_DESC = 1024
 
-# Words the generic title-caser would mangle ("Ui Design", "Ux Strategy").
+FM = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.S)
 ACRONYMS = {"ui": "UI", "ux": "UX", "ops": "Ops"}
 
 
@@ -49,79 +55,140 @@ def frontmatter(path):
     return out
 
 
-def first_sentence(text):
-    return re.split(r"(?<=[.!?])\s", text.strip())[0]
+def use_for(desc, limit=110):
+    """First sentence of a skill description, trimmed for an index table."""
+    s = re.split(r"(?<=[.!?])\s", desc.strip())[0].rstrip(".")
+    return s if len(s) <= limit else s[:limit].rsplit(" ", 1)[0] + "…"
 
 
-def build(name):
-    src = ROOT / name
+def load(collection):
+    src = ROOT / collection
     plugin = json.loads((src / ".claude-plugin" / "plugin.json").read_text())
+    skills = [(p.parent.name, frontmatter(p), p)
+              for p in sorted((src / "skills").glob("*/SKILL.md"))]
+    cmds = [(p.stem, frontmatter(p), p)
+            for p in sorted((src / "commands").glob("*.md"))] if (src / "commands").is_dir() else []
+    return plugin, skills, cmds
 
-    skills = []
-    for skill_md in sorted((src / "skills").glob("*/SKILL.md")):
-        fm = frontmatter(skill_md)
-        skills.append((skill_md.parent.name, fm.get("description", "")))
 
-    # claude.ai caps description at 1024 chars; keep the topic list inside it.
-    topics = ", ".join(s for s, _ in skills)
-    desc = f"{plugin['description']} Covers: {topics}."
-    if len(desc) > 1024:
-        desc = desc[:1020].rsplit(", ", 1)[0] + "."
+def clamp(desc):
+    if len(desc) <= MAX_DESC:
+        return desc
+    return desc[:MAX_DESC - 4].rsplit(", ", 1)[0] + "."
 
-    lines = [
-        "---",
-        f"name: {name}",
-        f"description: {desc}",
-        "---",
-        f"# {display_name(name)}",
-        "",
-        plugin["description"],
-        "",
-        "## How to use this skill",
-        "",
-        f"This bundles {len(skills)} focused skills. Find the one that matches the "
-        "request in the table below, then read its file before answering — the table "
-        "is only an index, the actual guidance lives in the linked files.",
-        "",
-        "| Skill | File | Use it for |",
-        "| --- | --- | --- |",
+
+def write_zip(path, skill_name, router, files):
+    """files: list of (source_path, path_inside_skill_folder)."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr(f"{skill_name}/SKILL.md", router)
+        for src, rel in files:
+            z.write(src, f"{skill_name}/{rel}")
+        names = z.namelist()
+
+    skill_mds = [n for n in names if n.endswith("SKILL.md")]
+    assert skill_mds == [f"{skill_name}/SKILL.md"], \
+        f"{skill_name}: zip must hold exactly one SKILL.md, found {skill_mds}"
+    assert len(names) < MAX_FILES, f"{skill_name}: {len(names)} files exceeds the {MAX_FILES} cap"
+    return len(names), path.stat().st_size
+
+
+def build_collection(collection):
+    plugin, skills, cmds = load(collection)
+    desc = clamp(f"{plugin['description']} Covers: "
+                 f"{', '.join(s for s, _, _ in skills)}.")
+
+    body = [
+        "---", f"name: {collection}", f"description: {desc}", "---",
+        f"# {display_name(collection)}", "", plugin["description"], "",
+        "## How to use this skill", "",
+        f"This bundles {len(skills)} focused skills as reference files. Match the "
+        "request to a row below, then read that file before answering — the table is "
+        "only an index, the guidance itself lives in the files.", "",
+        "| Skill | File | Use it for |", "| --- | --- | --- |",
     ]
-    for slug, sdesc in skills:
-        lines.append(f"| `{slug}` | `skills/{slug}/SKILL.md` | {first_sentence(sdesc)} |")
+    files = []
+    for slug, fm, path in skills:
+        body.append(f"| `{slug}` | `reference/{slug}.md` | {use_for(fm.get('description', ''))} |")
+        files.append((path, f"reference/{slug}.md"))
 
-    commands = sorted((src / "commands").glob("*.md")) if (src / "commands").is_dir() else []
-    if commands:
-        lines += [
-            "",
-            "## Multi-step workflows",
-            "",
-            "These chain several of the skills above into one end-to-end process. "
-            "Read the file when a request matches the whole workflow rather than a single skill.",
-            "",
-        ]
-        for cmd in commands:
-            lines.append(f"- `commands/{cmd.name}` — {first_sentence(frontmatter(cmd).get('description', cmd.stem))}")
+    if cmds:
+        body += ["", "## Multi-step workflows", "",
+                 "Each chains several skills above into one end-to-end process. Read the "
+                 "file when the request matches the whole workflow, not a single skill.", ""]
+        for slug, fm, path in cmds:
+            body.append(f"- `workflows/{slug}.md` — {use_for(fm.get('description', slug))}")
+            files.append((path, f"workflows/{slug}.md"))
 
-    lines += ["", "## Attribution", "",
-              f"From the Designer Skills suite by {plugin['author']['name']} "
-              f"({plugin['homepage']}), MIT licensed.", ""]
-    router = "\n".join(lines)
+    body += ["", "## Attribution", "",
+             f"From the Designer Skills suite by {plugin['author']['name']} "
+             f"({plugin['homepage']}), MIT licensed.", ""]
 
-    OUT.mkdir(parents=True, exist_ok=True)
-    zip_path = OUT / f"{name}.zip"
-    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
-        z.writestr(f"{name}/SKILL.md", router)
-        for f in sorted(src.rglob("*")):
-            if f.is_dir() or ".claude-plugin" in f.parts:
-                continue
-            z.write(f, f"{name}/{f.relative_to(src)}")
-        count = len(z.namelist())
-
-    assert count < 200, f"{name}: {count} files exceeds the 200-file upload cap"
-    assert len(desc) <= 1024, f"{name}: description too long"
-    print(f"{name:22} {len(skills):>3} skills  {count:>3} files  {zip_path.stat().st_size / 1024:>6.1f} KB")
+    n, size = write_zip(OUT / "by-collection" / f"{collection}.zip",
+                        collection, "\n".join(body), files)
+    print(f"  {collection:22} {len(skills):>3} skills  {n:>3} files  {size / 1024:>6.1f} KB")
 
 
+def build_all_in_one():
+    name = "designer-skills"
+    groups = [(c, *load(c)) for c in COLLECTIONS]
+    total = sum(len(s) for _, _, s, _ in groups)
+
+    desc = clamp(
+        "Complete design practice toolkit — user research, design systems, UX "
+        "strategy, UI craft, interaction design, prototyping and testing, design "
+        "ops, and visual critique. Use for any design task: personas, journey maps, "
+        "usability tests, design tokens, component specs, information architecture, "
+        "user flows, colour systems, typography scales, layout grids, responsive and "
+        "dark mode, accessibility, micro-interactions, animation, error states, "
+        "design critique, and design team process."
+    )
+
+    body = [
+        "---", f"name: {name}", f"description: {desc}", "---",
+        "# Designer Skills", "",
+        f"{total} design skills across nine areas of practice, plus end-to-end workflows.", "",
+        "## How to use this skill", "",
+        "Match the request to a row in the tables below, then read that reference file "
+        "before answering. The tables are only an index — the actual guidance lives in "
+        "the files, so read the relevant one rather than working from the summary. Read "
+        "more than one when a request spans areas (a screen design might pull "
+        "`layout-grid`, `color-system`, and `visual-hierarchy` together).", "",
+        "If nothing matches closely, answer normally rather than forcing a poor fit.", "",
+    ]
+
+    files = []
+    for collection, plugin, skills, cmds in groups:
+        body += [f"## {display_name(collection)}", "",
+                 "| Skill | File | Use it for |", "| --- | --- | --- |"]
+        for slug, fm, path in skills:
+            rel = f"reference/{collection}/{slug}.md"
+            body.append(f"| `{slug}` | `{rel}` | {use_for(fm.get('description', ''), 72)} |")
+            files.append((path, rel))
+        body.append("")
+        for slug, fm, path in cmds:
+            files.append((path, f"workflows/{collection}/{slug}.md"))
+
+    body += ["## Multi-step workflows", "",
+             "Each chains several skills into one end-to-end process. Read the file when "
+             "the request matches a whole workflow rather than a single skill.", ""]
+    for collection, _, _, cmds in groups:
+        if cmds:
+            body.append(f"- **{display_name(collection)}** — "
+                        + ", ".join(f"`workflows/{collection}/{s}.md`" for s, _, _ in cmds))
+
+    body += ["", "## Attribution", "",
+             "From the Designer Skills suite by MC Dean "
+             "(https://github.com/Owl-Listener/designer-skills), MIT licensed.", ""]
+
+    router = "\n".join(body)
+    n, size = write_zip(OUT / "all-in-one" / f"{name}.zip", name, router, files)
+    print(f"  {name:22} {total:>3} skills  {n:>3} files  {size / 1024:>6.1f} KB"
+          f"   router ~{len(router) // 4} tokens")
+
+
+print("all-in-one (1 upload):")
+build_all_in_one()
+print("\nby-collection (9 uploads):")
 for c in COLLECTIONS:
-    build(c)
-print(f"\nWrote {len(COLLECTIONS)} zips to {OUT.relative_to(ROOT)}/")
+    build_collection(c)
