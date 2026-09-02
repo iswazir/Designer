@@ -2,12 +2,18 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "designer-skills",
   "version": "2.0.0",
-  "description": "The Designer Skills suite: agentic skills, commands, and plugins for design in the agent era \u2014 design practice, AI product design, UX program management, design leadership, and inclusive design. One install surfaces every collection; each lives in its own repo.",
+  "description": "The Designer Skills suite: agentic skills, commands, and plugins for design in the agent era — design practice, AI product design, UX program management, design leadership, and inclusive design. One install surfaces every collection; each lives in its own repo.",
   "owner": {
     "name": "MC Dean",
     "url": "https://marieclairedean.substack.com/"
   },
   "plugins": [
+    {
+      "name": "breakout-brand-engine",
+      "description": "Content and brand operating skills modelled on breakout disruptor brands: customer psychology and mental models, killer copy, category creation, content systems at volume, editor-team leadership, regulated health-claim gates, and AI-native production.",
+      "source": "./breakout-brand-engine",
+      "category": "marketing"
+    },
     {
       "name": "design-research",
       "description": "User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.",
@@ -58,7 +64,7 @@
     },
     {
       "name": "visual-critique",
-      "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits \u2014 with a /critique-screen command that compiles a prioritised fix list.",
+      "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits — with a /critique-screen command that compiles a prioritised fix list.",
       "source": "./visual-critique",
       "category": "design"
     },
