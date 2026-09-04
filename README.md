@@ -62,7 +62,7 @@ Each collection also lives in its own repo, with its own stars and full detail. 
 
 ## Design practice (this repo)
 
-Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **107 skills and 32 commands across 9 plugins.**
+Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **108 skills and 32 commands across 9 plugins.**
 
 ### Plugins
 
@@ -75,7 +75,7 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 | interaction-design | 22 | 5 | Design meaningful interactions: micro-animations, state machines, gestures, feedback, cognitive laws, forms, onboarding, navigation, search, and conversational UX. |
 | prototyping-testing | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | design-ops | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
-| designer-toolkit | 7 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
+| designer-toolkit | 8 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
 | visual-critique | 7 | 2 | Visual critique: hierarchy, brand consistency, composition, typography, colour, affordance, and information density. |
 
 ### All commands

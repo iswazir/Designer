@@ -1,6 +1,6 @@
 # Skill Index
 
-**107 skills**, arranged by the situation you're in rather than the folder they live in.
+**108 skills**, arranged by the situation you're in rather than the folder they live in.
 
 Three ways to use this page: read **Start here** if you know your situation but not the vocabulary, check **Frequently confused** if two skills look interchangeable, or search the full tables at the bottom with Ctrl-F.
 
@@ -185,7 +185,7 @@ Check it works — with users, against heuristics, and by eye.
 | When specifying how a feature is traversed | `user-flow-diagram` | prototyping-testing |
 | When defining structure before visual design | `wireframe-spec` | prototyping-testing |
 
-### Ship and advocate (16)
+### Ship and advocate (17)
 
 Hand off, measure, and make the case for the work.
 
@@ -203,6 +203,7 @@ Hand off, measure, and make the case for the work.
 | When the system exists but teams ignore it | `design-system-adoption` | designer-toolkit |
 | When tokens exist and you suspect they are being bypassed | `design-token-audit` | designer-toolkit |
 | When engineering picks up the work | `handoff-spec` | design-ops |
+| When the brief asks for a magazine poster, editorial poster, newsprint, newspaper layout, essay layout, or manifesto | `magazine-poster` | designer-toolkit |
 | When presenting internally | `presentation-deck` | designer-toolkit |
 | When the day-to-day cadence needs structure | `team-workflow` | design-ops |
 | When the words are the deliverable | `ux-writing` | designer-toolkit |
