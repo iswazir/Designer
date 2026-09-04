@@ -1,6 +1,6 @@
 # Skill Index
 
-**108 skills**, arranged by the situation you're in rather than the folder they live in.
+**111 skills**, arranged by the situation you're in rather than the folder they live in.
 
 Three ways to use this page: read **Start here** if you know your situation but not the vocabulary, check **Frequently confused** if two skills look interchangeable, or search the full tables at the bottom with Ctrl-F.
 
@@ -97,7 +97,7 @@ Frame the problem, set direction, and decide what matters.
 | When staff and operations are part of the experience | `service-blueprint` | ux-strategy |
 | When unclear ownership stalls decisions | `stakeholder-alignment` | ux-strategy |
 
-### Design (41)
+### Design (42)
 
 Make the thing — layout, behaviour, motion, and copy.
 
@@ -115,6 +115,7 @@ Make the thing — layout, behaviour, motion, and copy.
 | When sizing and positioning controls, especially for touch | `fitts-law` | interaction-design |
 | When the artifact is a form | `form-design` | interaction-design |
 | When input is gestural | `gesture-patterns` | interaction-design |
+| When building a premium motion-rich marketing landing page and generic LLM layout defaults must be broken | `gpt-taste` | ui-design |
 | When a screen offers too many options at once | `hicks-law` | interaction-design |
 | When commissioning or standardising illustration | `illustration-style` | ui-design |
 | When a design tests fine but lands cold | `interfaces-that-feel` | interaction-design |
@@ -185,13 +186,14 @@ Check it works — with users, against heuristics, and by eye.
 | When specifying how a feature is traversed | `user-flow-diagram` | prototyping-testing |
 | When defining structure before visual design | `wireframe-spec` | prototyping-testing |
 
-### Ship and advocate (17)
+### Ship and advocate (19)
 
 Hand off, measure, and make the case for the work.
 
 | Reach for it | Skill | Plugin |
 | --- | --- | --- |
 | When telling a project's story to an external audience | `case-study` | designer-toolkit |
+| When the brief asks for image assets, posters, social visuals, ad concepts, or a campaign image set | `create-image-campaign` | designer-toolkit |
 | When running a session with people in the room | `design-critique` | design-ops |
 | When drift has built up over time | `design-debt-audit` | design-ops |
 | When reporting results upward | `design-impact-reporting` | design-ops |
@@ -205,6 +207,7 @@ Hand off, measure, and make the case for the work.
 | When engineering picks up the work | `handoff-spec` | design-ops |
 | When the brief asks for a magazine poster, editorial poster, newsprint, newspaper layout, essay layout, or manifesto | `magazine-poster` | designer-toolkit |
 | When presenting internally | `presentation-deck` | designer-toolkit |
+| When the brief asks for a carousel post, social carousel, Instagram or LinkedIn carousel, X thread cards, or 三连发 | `social-carousel` | designer-toolkit |
 | When the day-to-day cadence needs structure | `team-workflow` | design-ops |
 | When the words are the deliverable | `ux-writing` | designer-toolkit |
 | When file history is chaotic | `version-control-strategy` | design-ops |

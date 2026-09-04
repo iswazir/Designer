@@ -62,7 +62,7 @@ Each collection also lives in its own repo, with its own stars and full detail. 
 
 ## Design practice (this repo)
 
-Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **108 skills and 32 commands across 9 plugins.**
+Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **111 skills and 32 commands across 9 plugins.**
 
 ### Plugins
 
@@ -71,11 +71,11 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 | design-research | 12 | 4 | User research: personas, empathy maps, journey maps, interviews, usability testing, card sorting, surveys, and research repositories. |
 | design-systems | 11 | 3 | Build and maintain design systems: tokens, components, accessibility, theming, motion, governance, and localization. |
 | ux-strategy | 12 | 3 | Shape product direction: competitive analysis, design principles, experience mapping, information architecture, content strategy, and service blueprints. |
-| ui-design | 19 | 5 | Craft polished interfaces: layout grids, color systems, typography, responsive design, data viz, Gestalt/perceptual principles, and platform conventions. |
+| ui-design | 20 | 5 | Craft polished interfaces: layout grids, color systems, typography, responsive design, data viz, Gestalt/perceptual principles, and platform conventions. |
 | interaction-design | 22 | 5 | Design meaningful interactions: micro-animations, state machines, gestures, feedback, cognitive laws, forms, onboarding, navigation, search, and conversational UX. |
 | prototyping-testing | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | design-ops | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
-| designer-toolkit | 8 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
+| designer-toolkit | 10 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
 | visual-critique | 7 | 2 | Visual critique: hierarchy, brand consistency, composition, typography, colour, affordance, and information density. |
 
 ### All commands

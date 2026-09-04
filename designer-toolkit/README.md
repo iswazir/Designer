@@ -1,13 +1,15 @@
 # designer-toolkit
 Essential designer utilities for writing rationale, building presentations, crafting case studies, UX writing, and driving adoption.
-## Skills (8)
+## Skills (10)
 - **case-study** — Craft a portfolio case study with narrative arc, process evidence, and outcomes. Use when telling a project's story to an external audience. For an internal stakeholder deck, use `presentation-deck`.
+- **create-image-campaign** — Creative direction plus render-ready image prompts for a small campaign image system, saved with a campaign-directions file. Use when the brief asks for image assets, posters, social visuals, ad concepts, or a campaign image set. For an HTML editorial layout use `magazine-poster`; for a three-panel series use `social-carousel`.
 - **design-negotiation** — Advocate for design quality, scope, and timeline with partners and leadership using evidence and shared goals. Use in the conversation itself. For the commercial vocabulary behind it, use `business-design` (ux-strategy).
 - **design-rationale** — Write rationale connecting decisions to user needs, business goals, and principles. Use when a decision needs defending in writing. For a live conversation, use `design-negotiation`.
 - **design-system-adoption** — Create adoption strategy and enablement materials to drive design system usage. Use when the system exists but teams ignore it. For contribution and versioning rules, use `design-system-governance` (design-systems).
 - **design-token-audit** — Audit token usage across a product for coverage, drift, and hard-coded values. Use when tokens exist and you suspect they are being bypassed. For defining tokens in the first place, use `design-token` (design-systems).
 - **magazine-poster** — Editorial newsprint poster — dateline, oversized serif headline with one struck-through word and one italic accent, six numbered sections with annotated pull-quotes. Use when the brief asks for a magazine poster, editorial poster, newsprint, newspaper layout, essay layout, or manifesto. For slide narratives use `presentation-deck`.
 - **presentation-deck** — Structure a design presentation for a specific audience and decision. Use when presenting internally. For a portfolio narrative use `case-study`; for the written argument use `design-rationale`.
+- **social-carousel** — Three-card social carousel as 1080×1080 cinematic panels, with display headlines that connect across the series, plus per-card brand mark, index, caption and loop stamp. Use when the brief asks for a carousel post, social carousel, Instagram or LinkedIn carousel, X thread cards, or 三连发. For one long-form poster use `magazine-poster`.
 - **ux-writing** — Write interface copy — microcopy, error messages, empty states, and CTAs. Use when the words are the deliverable. For content structure and ownership, use `content-strategy` (ux-strategy).
 
 ## Commands (3)

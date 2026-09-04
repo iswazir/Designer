@@ -1,10 +1,11 @@
 # ui-design
 Craft polished user interfaces with layout grids, color systems, typography scales, responsive patterns, and visual hierarchy.
-## Skills (19)
+## Skills (20)
 - **aesthetic-usability** — Apply the Aesthetic-Usability Effect — polished, consistent interfaces are perceived as more usable and forgive minor friction. Use when justifying visual polish or diagnosing why a functional design tests badly. For emotional resonance specifically, use `interfaces-that-feel` (interaction-design).
 - **color-system** — Build a product colour system — tonal scales, semantic roles, and contrast compliance. Use when defining or rebuilding colour from scratch. For dark-mode adaptation use `dark-mode-design`; for chart palettes use `data-visualization`; for multi-brand token architecture use `theming-system` (design-systems).
 - **dark-mode-design** — Adapt an existing palette to dark mode — surface elevation, contrast rebalancing, and desaturation rules. Use when you already have a light palette to translate. For building the base palette first, use `color-system`.
 - **data-visualization** — Select chart types and design data encodings — marks, axes, labels, and accessible chart styling. Use when presenting data graphically. Owns chart selection and encoding only; the categorical colour ramp itself belongs to `color-system`.
+- **gpt-taste** — Awwwards-level landing page build directive — seeded layout randomisation, AIDA structure, wide editorial typography capped at 2-3 headline lines, gapless dense bento grids, and GSAP scroll pinning, stacking and scrubbing. Use when building a premium motion-rich marketing landing page and generic LLM layout defaults must be broken.
 - **illustration-style** — Define an illustration style guide — visual language, colour usage, and application rules. Use when commissioning or standardising illustration. For icons, use `icon-system` (design-systems).
 - **law-of-closure** — Apply the Law of Closure — the eye completes implied shapes from partial forms. Use when reducing visual weight by dropping borders or letting negative space suggest structure. For explicit containers, use `law-of-common-region`.
 - **law-of-common-region** — Apply the Law of Common Region — a shared container, background, or border groups elements regardless of spacing. Use when grouping must survive a tight layout. For grouping by spacing alone, use `law-of-proximity`.
