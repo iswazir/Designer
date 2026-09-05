@@ -3,15 +3,108 @@
   "negative": "No text, no letters, no logos, no wordmarks, no typography, no product packaging, no labels, no brand marks, no green environment, no green drinks unless specified, no neon, no ring light, no beauty lighting, no CGI gloss, no plastic skin, no exaggerated muscles, no stock fitness posing, no smiling at camera, no malformed hands, no duplicated limbs, no recognisable celebrities.",
   "concepts": [
     {
+      "slug": "brand-expression",
+      "title": "Brand expression: the standards world (render these first)",
+      "aspect": "3:2",
+      "frames": [
+        {
+          "id": "01",
+          "version": 1,
+          "prompt": "A single clear glass of deep luminous crimson liquid on dark slate, one hard raking light from the left, fine condensation on the glass, black background, nothing else in frame. Shot like fragrance photography, absolute stillness.",
+          "notes": "The red glass. Primary distinctive asset."
+        },
+        {
+          "id": "02",
+          "version": 1,
+          "prompt": "Macro of deep crimson liquid entering clear water in a glass, the moment it blooms into a cloud, on pale stone, one cool side light, shallow depth of field, no hands, no packaging.",
+          "notes": "The cloud. Second distinctive asset."
+        },
+        {
+          "id": "03",
+          "version": 1,
+          "prompt": "Two hands with visible tendons tearing open a plain matte blank foil sachet with no printing, over dark slate, one hard side light, no face, no background detail.",
+          "notes": "Hands. Real sachet composited in Figma."
+        },
+        {
+          "id": "04",
+          "version": 1,
+          "prompt": "A clear glass of plain water on a concrete ledge at dawn, long cool shadows, one warm edge of sunlight catching the rim, empty street behind in soft focus. No product, no people.",
+          "notes": "The world without the product. Must still read IM8."
+        },
+        {
+          "id": "05",
+          "version": 1,
+          "prompt": "Profile of a woman in her fifties at 5am outdoors, cold air, breath faintly visible, dark background, one cool light from the front-left, neutral expression, plain grey clothing, film grain.",
+          "notes": "Breath. No product."
+        },
+        {
+          "id": "06",
+          "version": 1,
+          "prompt": "Macro triptych feel in one frame: slate, brushed steel and frosted glass surfaces meeting at an edge, cool directional light, a single faint crimson reflection on the steel, no objects, no text.",
+          "notes": "Materials."
+        },
+        {
+          "id": "07",
+          "version": 1,
+          "prompt": "A row of five identical calibrated glass laboratory beakers with clear water on a brushed steel bench, clinical cool daylight from a high window, the fourth beaker holding deep crimson liquid, no labels, no text, no people.",
+          "notes": "Measurement. No claim implied; a plate."
+        },
+        {
+          "id": "08",
+          "version": 1,
+          "prompt": "An empty downtown street just after sunrise, tall glass-and-stone buildings, long sightlines, crosswalk bars, cool blue shadow filling the street, one warm break of sun between buildings, subtle haze, no people, no cars, no signage.",
+          "notes": "Dawn architecture. The hero brief's world without the sprint."
+        },
+        {
+          "id": "09",
+          "version": 1,
+          "prompt": "A man in his fifties standing at a large window at dawn, back to camera, plain charcoal clothing, holding a clear glass of deep crimson liquid at his side, cool light, the city soft beyond the glass, stillness.",
+          "notes": "Posture. The person is doing something, not smiling."
+        },
+        {
+          "id": "10",
+          "version": 1,
+          "aspect": "4:5",
+          "prompt": "A single clear glass of deep crimson liquid on pale bone stone, top-down, one cool side light casting a long shadow, condensation ring on the stone, nothing else.",
+          "notes": "4:5 social variant of the red glass."
+        }
+      ]
+    },
+    {
       "slug": "say-the-thing",
       "title": "Say the Thing (Tier B energy hook)",
       "aspect": "9:16",
       "frames": [
-        {"id": "01", "version": 1, "prompt": "A woman in her late forties at an office desk at 2:40pm, third coffee beside the keyboard, looking past the monitor at nothing. Flat fluorescent light, no window. Phone-camera feel, handheld, slightly too close. Screen is blank grey.", "notes": "Hook frame. The afternoon shot honestly."},
-        {"id": "02", "version": 1, "prompt": "Close on the same office desk: a hand on a mouse, a blurred email window with no legible text, a cold half-cup of coffee, a sticky note with nothing written on it. Dull afternoon, flat light, shallow focus on the hand.", "notes": "Evidence of the problem. Text must be illegible."},
-        {"id": "03", "version": 1, "prompt": "A man in his mid-forties in a lived-in kitchen at 7am, looking directly at the camera, neutral expression, a beat before speaking. Natural window light from the left, real clutter on the counter, handheld phone-camera feel.", "notes": "The reframe frame. Direct address."},
-        {"id": "04", "version": 1, "prompt": "Hands tearing a plain blank foil sachet with no printing over a clear glass of water on a cluttered kitchen counter, morning window light, a deep crimson liquid beginning to cloud the water. Real kitchen, no styling, no slow motion feel. The sachet is out of focus.", "notes": "The only crimson in the sequence. Composite real sachet over the blank placeholder in Figma."},
-        {"id": "05", "version": 1, "prompt": "A hand holding a plain blank foil sachet up towards the camera in a kitchen, morning light, label area blank, background soft. Nothing else in frame.", "notes": "Plate for the proof card. Real label composited; on-screen qualifier set in Figma."}
+        {
+          "id": "01",
+          "version": 1,
+          "prompt": "A woman in her late forties at an office desk at 2:40pm, third coffee beside the keyboard, looking past the monitor at nothing. Flat fluorescent light, no window. Phone-camera feel, handheld, slightly too close. Screen is blank grey.",
+          "notes": "Hook frame. The afternoon shot honestly."
+        },
+        {
+          "id": "02",
+          "version": 1,
+          "prompt": "Close on the same office desk: a hand on a mouse, a blurred email window with no legible text, a cold half-cup of coffee, a sticky note with nothing written on it. Dull afternoon, flat light, shallow focus on the hand.",
+          "notes": "Evidence of the problem. Text must be illegible."
+        },
+        {
+          "id": "03",
+          "version": 1,
+          "prompt": "A man in his mid-forties in a lived-in kitchen at 7am, looking directly at the camera, neutral expression, a beat before speaking. Natural window light from the left, real clutter on the counter, handheld phone-camera feel.",
+          "notes": "The reframe frame. Direct address."
+        },
+        {
+          "id": "04",
+          "version": 1,
+          "prompt": "Hands tearing a plain blank foil sachet with no printing over a clear glass of water on a cluttered kitchen counter, morning window light, a deep crimson liquid beginning to cloud the water. Real kitchen, no styling, no slow motion feel. The sachet is out of focus.",
+          "notes": "The only crimson in the sequence. Composite real sachet over the blank placeholder in Figma."
+        },
+        {
+          "id": "05",
+          "version": 1,
+          "prompt": "A hand holding a plain blank foil sachet up towards the camera in a kitchen, morning light, label area blank, background soft. Nothing else in frame.",
+          "notes": "Plate for the proof card. Real label composited; on-screen qualifier set in Figma."
+        }
       ]
     },
     {
@@ -19,9 +112,24 @@
       "title": "Proof You Can Use (plates only; documents are photographed real)",
       "aspect": "4:5",
       "frames": [
-        {"id": "01", "version": 1, "prompt": "A plain white textured paper card filling the frame with a single thin horizontal deep crimson rule one third of the way down. Nothing else. Soft even daylight, faint paper grain.", "notes": "Card 1 plate. Headline set in Figma."},
-        {"id": "02", "version": 1, "prompt": "A wooden desk from above with two printed documents side by side, text illegible and out of focus, a deep crimson marker pen lying across one of them with a single underline visible. Soft window light, muted, documentary.", "notes": "Plate behind the registry-record and label crops. Real documents composited sharp on top."},
-        {"id": "03", "version": 1, "prompt": "A formulation scientist in their fifties in an ordinary office, not a lab, no lab coat, sitting at a desk with papers, looking slightly off camera as if listening to a question. Natural light, muted palette, 35mm, honest.", "notes": "Reel talking-head reference frame for casting and light. Not for publication."}
+        {
+          "id": "01",
+          "version": 1,
+          "prompt": "A plain white textured paper card filling the frame with a single thin horizontal deep crimson rule one third of the way down. Nothing else. Soft even daylight, faint paper grain.",
+          "notes": "Card 1 plate. Headline set in Figma."
+        },
+        {
+          "id": "02",
+          "version": 1,
+          "prompt": "A wooden desk from above with two printed documents side by side, text illegible and out of focus, a deep crimson marker pen lying across one of them with a single underline visible. Soft window light, muted, documentary.",
+          "notes": "Plate behind the registry-record and label crops. Real documents composited sharp on top."
+        },
+        {
+          "id": "03",
+          "version": 1,
+          "prompt": "A formulation scientist in their fifties in an ordinary office, not a lab, no lab coat, sitting at a desk with papers, looking slightly off camera as if listening to a question. Natural light, muted palette, 35mm, honest.",
+          "notes": "Reel talking-head reference frame for casting and light. Not for publication."
+        }
       ]
     },
     {
@@ -29,10 +137,30 @@
       "title": "The Long Answer, Episode 01 (documentary)",
       "aspect": "16:9",
       "frames": [
-        {"id": "01", "version": 1, "prompt": "An ordinary clinic room, a person's forearm resting on a padded armrest with a tourniquet, a nurse's gloved hands preparing a blood draw, faces out of frame. Flat clinical daylight, muted, documentary, no drama.", "notes": "Day 0 baseline. No faces."},
-        {"id": "02", "version": 1, "prompt": "A hotel room at 6am, an open suitcase on the floor, a clear glass of deep crimson liquid on the nightstand beside a phone, curtains half open to a grey city. Documentary, muted, handheld.", "notes": "Ninety days of real life. The crimson is the only warm object."},
-        {"id": "03", "version": 1, "prompt": "Two people at a kitchen table, a clinician in her fifties and a man in his forties, two printed reports between them with text illegible, both looking at the papers, not at each other, not at camera. Morning window light, muted, documentary, 35mm.", "notes": "Honest interpretation frame."},
-        {"id": "04", "version": 1, "prompt": "A plain white textured paper card filling the frame with a single thin horizontal deep crimson rule one third of the way down. Nothing else. Soft even daylight, faint paper grain.", "notes": "Close card plate. Same as Proof card 1; reuse."}
+        {
+          "id": "01",
+          "version": 1,
+          "prompt": "An ordinary clinic room, a person's forearm resting on a padded armrest with a tourniquet, a nurse's gloved hands preparing a blood draw, faces out of frame. Flat clinical daylight, muted, documentary, no drama.",
+          "notes": "Day 0 baseline. No faces."
+        },
+        {
+          "id": "02",
+          "version": 1,
+          "prompt": "A hotel room at 6am, an open suitcase on the floor, a clear glass of deep crimson liquid on the nightstand beside a phone, curtains half open to a grey city. Documentary, muted, handheld.",
+          "notes": "Ninety days of real life. The crimson is the only warm object."
+        },
+        {
+          "id": "03",
+          "version": 1,
+          "prompt": "Two people at a kitchen table, a clinician in her fifties and a man in his forties, two printed reports between them with text illegible, both looking at the papers, not at each other, not at camera. Morning window light, muted, documentary, 35mm.",
+          "notes": "Honest interpretation frame."
+        },
+        {
+          "id": "04",
+          "version": 1,
+          "prompt": "A plain white textured paper card filling the frame with a single thin horizontal deep crimson rule one third of the way down. Nothing else. Soft even daylight, faint paper grain.",
+          "notes": "Close card plate. Same as Proof card 1; reuse."
+        }
       ]
     },
     {
@@ -40,10 +168,31 @@
       "title": "Out of the Green (OOH and social)",
       "aspect": "3:2",
       "frames": [
-        {"id": "01", "version": 1, "prompt": "A precise grid of forty identical plain clear glasses of pale desaturated green liquid on a pale stone surface, photographed straight down, even studio daylight, no labels, no branding. One glass off-centre to the right is filled with deep luminous crimson liquid. Nothing else in frame.", "notes": "48-sheet hero. Green is the field. Headline set in Figma."},
-        {"id": "02", "version": 1, "prompt": "A long retail shelf of identical unbranded matte pale-green cylindrical tubs with no labels, receding into soft focus, cool even light. At the near end of the shelf, one clear glass of deep crimson liquid, sharp.", "notes": "Social reveal end frame and retail reference."},
-        {"id": "03", "version": 1, "prompt": "A clear glass being filled from above; the liquid stream is pale green at the top of the pour and deep crimson where it meets the glass, so the glass is filling with crimson. Pale stone background, studio daylight, no hands visible, no packaging.", "notes": "Motion poster key frame."},
-        {"id": "04", "version": 1, "aspect": "9:16", "prompt": "A shelf of identical unbranded matte pale-green tubs seen from a low angle as if the camera is tracking along it, all soft, and at the far right edge a single deep crimson glass in sharp focus. Cool even light, no text.", "notes": "9:16 social. Camera stops on red."}
+        {
+          "id": "01",
+          "version": 1,
+          "prompt": "A precise grid of forty identical plain clear glasses of pale desaturated green liquid on a pale stone surface, photographed straight down, even studio daylight, no labels, no branding. One glass off-centre to the right is filled with deep luminous crimson liquid. Nothing else in frame.",
+          "notes": "48-sheet hero. Green is the field. Headline set in Figma."
+        },
+        {
+          "id": "02",
+          "version": 1,
+          "prompt": "A long retail shelf of identical unbranded matte pale-green cylindrical tubs with no labels, receding into soft focus, cool even light. At the near end of the shelf, one clear glass of deep crimson liquid, sharp.",
+          "notes": "Social reveal end frame and retail reference."
+        },
+        {
+          "id": "03",
+          "version": 1,
+          "prompt": "A clear glass being filled from above; the liquid stream is pale green at the top of the pour and deep crimson where it meets the glass, so the glass is filling with crimson. Pale stone background, studio daylight, no hands visible, no packaging.",
+          "notes": "Motion poster key frame."
+        },
+        {
+          "id": "04",
+          "version": 1,
+          "aspect": "9:16",
+          "prompt": "A shelf of identical unbranded matte pale-green tubs seen from a low angle as if the camera is tracking along it, all soft, and at the far right edge a single deep crimson glass in sharp focus. Cool even light, no text.",
+          "notes": "9:16 social. Camera stops on red."
+        }
       ]
     },
     {
@@ -51,14 +200,54 @@
       "title": "What Are You Training For? (Episodes A and B)",
       "aspect": "3:2",
       "frames": [
-        {"id": "01", "version": 1, "prompt": "A male athlete in his forties alone in a plain concrete gym at 5am, seen in profile mid-rep with a barbell, no branding anywhere, cold blue pre-dawn light from a high window, breath faintly visible, film grain. Not heroic, just working.", "notes": "Episode A open. Generic casting, no likeness."},
-        {"id": "02", "version": 1, "prompt": "A woman in her fifties in a lived-in kitchen at 7am pouring deep crimson liquid from a plain glass jug into a clear glass, children's shoes lined up by the door in the background, morning window light, 35mm, handheld, honest.", "notes": "Same ritual, different life. The only crimson in Episode A besides frame 08."},
-        {"id": "03", "version": 1, "prompt": "A man in his sixties on a bicycle on a park path at morning, two children on small bikes ahead of him slightly out of focus, cool overcast light, ordinary clothes, no logos, 35mm, film grain.", "notes": "Capability, not sport."},
-        {"id": "04", "version": 1, "prompt": "A nurse in plain unbranded scrubs in a hospital break room mid-shift, sitting at a small table, drinking from a clear glass of water, tired and composed, flat fluorescent light shot honestly, 35mm.", "notes": "Shot the same way as the athlete."},
-        {"id": "05", "version": 1, "prompt": "A man of about forty-eight running on a quiet suburban road at dawn, ordinary grey running kit with no logos, plain white shoes, slightly heavy stride, seen from a low lateral position, cool blue light with the first warm sun on his shoulder, film grain.", "notes": "Episode B: the first 2km. Not elite."},
-        {"id": "06", "version": 1, "prompt": "A plain physiotherapy room, a person's lower leg with a resistance band around the ankle doing a slow exercise, therapist's hands guiding, faces out of frame, flat clinical daylight, muted, boring on purpose.", "notes": "Episode B: the boring exercises. Never composited with any product frame."},
-        {"id": "07", "version": 1, "prompt": "A physiotherapist's treatment table in a plain room, a male athlete in his forties lying face down with a therapist's hands on his hamstring, faces out of frame, flat daylight, muted, documentary.", "notes": "Episode A: treatment. Never composited with any product frame."},
-        {"id": "08", "version": 1, "prompt": "A still life: a single clear glass of deep luminous crimson liquid on a pale stone kitchen counter beside a window, early morning light raking across it, nothing else in frame, shallow depth of field, film grain.", "notes": "Campaign close plate. Real sachet composited beside the glass in Figma; endline set in Figma."}
+        {
+          "id": "01",
+          "version": 1,
+          "prompt": "A male athlete in his forties alone in a plain concrete gym at 5am, seen in profile mid-rep with a barbell, no branding anywhere, cold blue pre-dawn light from a high window, breath faintly visible, film grain. Not heroic, just working.",
+          "notes": "Episode A open. Generic casting, no likeness."
+        },
+        {
+          "id": "02",
+          "version": 1,
+          "prompt": "A woman in her fifties in a lived-in kitchen at 7am pouring deep crimson liquid from a plain glass jug into a clear glass, children's shoes lined up by the door in the background, morning window light, 35mm, handheld, honest.",
+          "notes": "Same ritual, different life. The only crimson in Episode A besides frame 08."
+        },
+        {
+          "id": "03",
+          "version": 1,
+          "prompt": "A man in his sixties on a bicycle on a park path at morning, two children on small bikes ahead of him slightly out of focus, cool overcast light, ordinary clothes, no logos, 35mm, film grain.",
+          "notes": "Capability, not sport."
+        },
+        {
+          "id": "04",
+          "version": 1,
+          "prompt": "A nurse in plain unbranded scrubs in a hospital break room mid-shift, sitting at a small table, drinking from a clear glass of water, tired and composed, flat fluorescent light shot honestly, 35mm.",
+          "notes": "Shot the same way as the athlete."
+        },
+        {
+          "id": "05",
+          "version": 1,
+          "prompt": "A man of about forty-eight running on a quiet suburban road at dawn, ordinary grey running kit with no logos, plain white shoes, slightly heavy stride, seen from a low lateral position, cool blue light with the first warm sun on his shoulder, film grain.",
+          "notes": "Episode B: the first 2km. Not elite."
+        },
+        {
+          "id": "06",
+          "version": 1,
+          "prompt": "A plain physiotherapy room, a person's lower leg with a resistance band around the ankle doing a slow exercise, therapist's hands guiding, faces out of frame, flat clinical daylight, muted, boring on purpose.",
+          "notes": "Episode B: the boring exercises. Never composited with any product frame."
+        },
+        {
+          "id": "07",
+          "version": 1,
+          "prompt": "A physiotherapist's treatment table in a plain room, a male athlete in his forties lying face down with a therapist's hands on his hamstring, faces out of frame, flat daylight, muted, documentary.",
+          "notes": "Episode A: treatment. Never composited with any product frame."
+        },
+        {
+          "id": "08",
+          "version": 1,
+          "prompt": "A still life: a single clear glass of deep luminous crimson liquid on a pale stone kitchen counter beside a window, early morning light raking across it, nothing else in frame, shallow depth of field, film grain.",
+          "notes": "Campaign close plate. Real sachet composited beside the glass in Figma; endline set in Figma."
+        }
       ]
     }
   ]
