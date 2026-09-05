@@ -1,0 +1,6 @@
+.env
+outputs/
+inputs/product/*
+inputs/references/*
+!inputs/product/.gitkeep
+!inputs/references/.gitkeep
