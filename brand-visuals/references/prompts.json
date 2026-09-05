@@ -71,6 +71,56 @@
       ]
     },
     {
+      "slug": "cast-range",
+      "title": "Cast range: aspiration by possibility (life in motion, 40%)",
+      "aspect": "3:2",
+      "frames": [
+        {
+          "id": "01",
+          "version": 1,
+          "prompt": "A woman of about sixty-eight climbing out of an outdoor lido at dawn, wet grey hair pushed back, weathered capable shoulders, plain dark swimsuit, breath visible, looking at the water not the camera, cold blue light with one warm edge on her cheek, film grain.",
+          "notes": "Absorbed in a practice. Her own hero."
+        },
+        {
+          "id": "02",
+          "version": 1,
+          "prompt": "A man of about seventy-two at a workbench in a small workshop, hands with visible veins holding a piece of wood to the light, reading glasses pushed up, focused, one window light from the side, dust in the air, muted palette, 50mm portrait distance.",
+          "notes": "Practice and presence. No product."
+        },
+        {
+          "id": "03",
+          "version": 1,
+          "prompt": "A woman of about forty-five, a chef, at a steel kitchen pass at 6am before service, tasting from a spoon, eyes closed for a beat, plain whites, hard side light, steam, no signage, honest and unglamorous.",
+          "notes": "The hour before the visible day."
+        },
+        {
+          "id": "04",
+          "version": 1,
+          "prompt": "A man of about fifty-five on a rowing machine in a plain gym, mid-stroke, back to the camera at three-quarter angle, sweat on the neck, cool single light, no branding anywhere, film grain, effort without heroics.",
+          "notes": "Everyday performer."
+        },
+        {
+          "id": "05",
+          "version": 1,
+          "prompt": "A woman of about sixty-one sitting on stone steps after a run, elbows on knees, catching her breath, grey running kit with no logos, morning sun raking across her face from the left, eyes on the street, composed, 35mm, slightly too close.",
+          "notes": "The small satisfaction of the thing done. Episode B register."
+        },
+        {
+          "id": "06",
+          "version": 1,
+          "prompt": "Two people in their seventies dancing in a plain hall, mid-turn, absorbed in each other and the step, not the camera, one warm practical light, dark background, movement caught with slight motion blur on the hem only, faces sharp.",
+          "notes": "Joy directed at the thing. Oura register without the ring."
+        },
+        {
+          "id": "07",
+          "version": 1,
+          "aspect": "4:5",
+          "prompt": "A man of about forty at a piano in a quiet room at night, hands on the keys, head slightly bowed, one lamp, deep shadow, plain shirt, absorbed, 50mm, film grain.",
+          "notes": "4:5 portrait. Focus, not performance."
+        }
+      ]
+    },
+    {
       "slug": "say-the-thing",
       "title": "Say the Thing (Tier B energy hook)",
       "aspect": "9:16",

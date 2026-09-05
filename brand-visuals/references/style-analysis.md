@@ -48,7 +48,23 @@ Slightly too close. 35mm equivalent for people, macro for materials and the clou
 
 ## Casting
 
-Adults 35 to 70. A person with a job and a life. Expressions neutral, focused, or tired with dignity. Never posed. No exaggerated musculature. Athletes and ambassadors are shot the same way as nurses: same lens, same light, same distance. If the ambassador is removed and the frame stops reading as IM8, the frame has failed.
+**Cast for absorption in a practice.** The aspiration comes from how alive someone is inside something they are good at, not from how young or symmetrical they are. Reference: Oura, "Give Us the Finger," 2025. A cast from their forties to late seventies, a man at a piano, a woman on a mountaintop, a chess player mid-checkmate, tango dancers. Each one fully immersed. Age read as vitality, never as decline.
+
+Two kinds of aspiration, and only one belongs to IM8:
+
+- **Aspiration by status:** I want their life. The category default. Pristine kitchens, symmetrical faces, the athlete as peak. Reads as lifestyle stock.
+- **Aspiration by possibility:** I could keep doing this. The person is recognisable, the possibility is desirable. This is the IM8 register.
+
+Rules:
+
+- Professional campaign shoots of real people, 35 to 75, across bodies, ethnicities, and abilities. Healthy, specific, present. Cast for presence and evident practice, not conventional beauty. Weather on the skin, a life in the hands.
+- Every age is the hero of its own frame. Never "young person now, old person later." The 68-year-old swimmer is not the "later" of anyone else's story.
+- A face appears only when it is doing something. Joy is allowed when it is directed at the thing, never at the camera.
+- Expressions: focus, effort, composure, the small satisfaction of the thing done. Never posed, never performed.
+- Camera at eye level or slightly low. Never looking down at an older subject.
+- Athletes, ambassadors, and customers are shot the same way: same lens, same light, same distance. If the ambassador is removed and the frame stops reading as IM8, the frame has failed.
+
+This is the "life in motion" forty percent. The ritual thirty and evidence thirty carry the same rules with fewer faces.
 
 ## Product
 
