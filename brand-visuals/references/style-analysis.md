@@ -6,7 +6,7 @@ Sources: the Part 3 concept build v2; the competitive ad library (tmrw, Timeline
 
 ## The idea in one line
 
-> A standards world, not a ritual world.
+> A standards world, not a ritual world. If you keep a standard for yourself, you're one of us.
 
 AG1 and the category sell the morning, upgraded: comfort, habit, warmth, green. IM8's truths are discipline, a placebo-controlled trial of the finished formula, third-party testing, measured bodies. Those are standards truths. The world that expresses them looks like precision instruments, architecture, materials and measurement, with light that reveals rather than flatters. Closer to a Leica or a Swiss watchmaker than to a supplement brand.
 
@@ -91,7 +91,7 @@ Not generated. Cards are white or bone with the crimson rule, set in Figma with 
 |---|---|---|---|
 | Brand expression | 3:2, 4:5 | The red glass, the cloud | Defines the world itself; render these first |
 | Say the Thing | 9:16 | The pour, one frame only | The afternoon shot honestly, the morning not glamorised to compensate |
-| Proof You Can Use | 4:5 | One rule per card | White space is the confidence |
+| Eight Questions | 4:5 | One rule per card | White space is the confidence; the number is the method |
 | The Long Answer | 16:9 and 9:16 | Glass on a nightstand | Documentary, curious, never triumphant |
 | Out of the Green | 3:2 and 9:16 | The one object, and it is the idea | Green is the field; if crimson exceeds ten percent the idea inverts |
 | What Are You Training For? | 3:2 and 16:9 | Frame 8 still life only | Everyone shot the same way; product at breakfast, never at treatment |
