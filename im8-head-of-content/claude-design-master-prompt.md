@@ -51,6 +51,41 @@ Color progression:
 
 Allow IM8 Red, Deep Burgundy, and Deep Aubergine to carry most of the identity. Fire Engine and Signal Crimson should appear as concentrated moments of energy, not default backgrounds.
 
+## Two color families
+
+The red-to-aubergine palette is the brand backbone. The orange-red-to-gold spectrum is the distinctive energy aura for Longevity. Keeping them separate gives Longevity warmth without making the whole system feel yellow or supplement-like.
+
+### Brand backbone
+
+Use everywhere across IM8:
+
+| Token | Hex |
+|---|---:|
+| Fire Engine | `#D50024` |
+| IM8 Red | `#A40011` |
+| Deep Burgundy | `#50000B` |
+| Deep Aubergine | `#2F0F12` |
+| Almost Black | `#1A0205` |
+
+### Longevity spectrum
+
+Use selectively around the Longevity product, its gradients, ingredient imagery, and cellular-energy graphics:
+
+| Token | Hex |
+|---|---:|
+| Ember Orange | `#E85B3F` |
+| Blood Orange | `#EF7745` |
+| Warm Apricot | `#F2A05A` |
+| Illuminated Gold | `#F2C45B` |
+
+Progression:
+
+```text
+#A40011 → #E85B3F → #EF7745 → #F2A05A → #F2C45B
+```
+
+This gives the orange-red, glowing, almost-yellow effect without requiring yellowish page backgrounds. IM8 presents Longevity as a distinct healthy-aging offer, so this spectrum operates as a product expression inside the wider brand rather than redefining the identity.[12]
+
 ## Text colors
 
 | Role | Hex |
@@ -87,6 +122,8 @@ Use Ember Coral as the universal graphic highlight:
 
 Do not use Ember Coral for small text on white.
 
+Ember Coral is deliberately a touch warmer and more orange than a pure coral, so it connects the core IM8 reds to the Longevity glow while still reading as part of the red family. Do not ask coral to replace Longevity's orange-gold. Coral bridges to it; orange and gold remain a controlled product-specific expression.
+
 ### Soft Salmon
 
 ```text
@@ -101,14 +138,20 @@ Use salmon as a softer secondary expression:
 - Selected tags on dark surfaces
 - Occasional editorial moments
 
-Do not use salmon as ordinary text on white.
+Do not use salmon as ordinary text on white. It works on burgundy, but it is too pale to function consistently on light surfaces.
 
-### Accessible text modes
+### Surface rule
 
-- On light surfaces: use `#A40011` for highlighted text.
-- On dark surfaces: use `#FF8A78` or `#FF9693`.
-- For a universal graphic accent: use `#E85B4A`.
-- For text inside an Ember Coral tag: use `#1A0205`.
+A single highlight hex cannot provide ideal small-text contrast on both white and deep burgundy. WCAG requires 4.5:1 contrast for normal text, so use one visual highlight family with two accessible text variants.[11]
+
+| Surface | Highlight text |
+|---|---:|
+| Light surfaces | `#A40011` |
+| Dark burgundy or aubergine | `#FF8A78` (or `#FF9693` when large) |
+| Universal graphic accent | `#E85B4A` |
+| Text inside an Ember Coral tag | `#1A0205` |
+
+All three highlight values occupy the same warm red-coral territory, so the system reads as unified.
 
 ## Light neutrals
 
@@ -130,6 +173,8 @@ Use Soft Porcelain for people, leadership, customer life, and warmer photography
 
 Use Light Blush selectively. It should register as a neutral carrying a trace of pink, not as a pink page.
 
+These cool and near-neutral surfaces matter more once Longevity introduces orange and gold. They keep the warm spectrum looking luminous and intentional. A creamy or yellow canvas would flatten the orange-gold because there would be insufficient temperature contrast.
+
 ## Gold accents
 
 | Token | Hex | Role |
@@ -147,11 +192,27 @@ Use gold sparingly. Restrict it primarily to:
 
 Do not use gold as a general text color or decorate every card with it.
 
+## Palette balance
+
+Directional, not a quota:
+
+| Share | Family |
+|---:|---|
+| 70% | White and restrained neutral lights |
+| 20% | Burgundy, red, and aubergine |
+| 10% | Coral, orange, and occasional gold |
+
+Gold belongs primarily to Longevity, milestones, fine rules, and premium details. Salmon belongs primarily to large display type, human stories, and soft gradients. Crimson stays recognizable without becoming a mandatory treatment for every type of content.
+
 ***
 
 # Gradient System
 
-## Deep Crimson
+Six controlled gradients plus one product gradient. Each belongs to a color family and carries a distinct job. IM8 already uses dark burgundy, crimson, salmon, cream, and orange-gold transitions; this system makes those transitions quieter and more intentional.
+
+## Brand gradients
+
+### Deep Crimson
 
 ```css
 background: linear-gradient(
@@ -170,11 +231,11 @@ Use for:
 - Premium campaign fields
 - Rare full-background moments
 
-Keep most of the field dark. Crimson should emerge at an edge rather than consume the entire composition.
+Behavior: begin in near-purple aubergine, move through recognizable IM8 burgundy, and let crimson emerge at one edge. Keep the red portion below roughly one third of the field so it feels dimensional rather than promotional.
 
 Use white text. Salmon may be used for one large accent phrase.
 
-## Signal Crimson
+### Signal Crimson
 
 ```css
 background: linear-gradient(
@@ -194,11 +255,11 @@ Use for:
 - Performance-oriented creative
 - Highlight cards and horizontal bands
 
-This is the energetic gradient. Prefer smaller surfaces and cropped fields over repeated full-page use.
+Behavior: this is the brighter, more urgent expression. Use it on smaller surfaces, cropped gradient fields, buttons, or graphic bands rather than repeatedly covering entire pages.
 
 Use white text.
 
-## Red to Salmon
+### Red to Salmon
 
 ```css
 background: linear-gradient(
@@ -218,11 +279,13 @@ Use for:
 - Customer-life imagery
 - Large emotional statements
 
-Treat salmon as light entering the red. Do not give each color equal visual weight.
+Behavior: the salmon should appear like light entering the red, not as an equal three-color rainbow. Let most of the composition remain red and use salmon at the illuminated edge.
 
 Use white over the red region and `#1A0205` over the salmon region. Never place a paragraph across the entire transition.
 
-## Neutral Salmon Wash
+## Light gradients
+
+### Neutral Salmon Wash
 
 ```css
 background: linear-gradient(
@@ -242,11 +305,11 @@ Use for:
 - Approachable editorial moments
 - Soft transitions between white and crimson sections
 
-This should appear predominantly neutral. Confine the pink warmth to one edge or corner.
+Behavior: this should register as a neutral background with a trace of pink atmosphere, never as a pink slide. Reserve the warmer end for one corner or edge.
 
-Use `#1A0205` for body copy and `#50000B` for headlines.
+Use `#1A0205` for body copy, `#50000B` for headlines, and selective `#A40011` for emphasis.
 
-## Cool Neutral Light
+### Cool Neutral Light
 
 ```css
 background: linear-gradient(
@@ -267,9 +330,11 @@ Use for:
 - Information-dense pages
 - Primary website reading sections
 
-Keep the transition nearly imperceptible. Its purpose is depth, not decoration.
+Behavior: keep it extremely subtle. Its purpose is depth and hierarchy without looking visibly gradient-designed.
 
-## Soft Warm Light
+Use `#1A0205` for body copy, `#50000B` for headlines, and `#A40011` for controlled emphasis.
+
+### Soft Warm Light
 
 ```css
 background: linear-gradient(
@@ -289,9 +354,13 @@ Use for:
 - Human stories that should not become pink
 - Editorial transitions
 
-This replaces the website's more yellow cream behavior.
+Behavior: this replaces IM8's more yellow cream backgrounds. It adds humanity while remaining contemporary and close to neutral.
 
-## Cellular Ember
+Use `#1A0205` or `#50000B`.
+
+## Longevity gradient
+
+### Cellular Ember
 
 ```css
 background: linear-gradient(
@@ -313,23 +382,40 @@ Use exclusively or primarily for:
 - Transformation
 - Product-specific scientific visualization
 
-Always anchor the gradient in IM8 Red. Orange and gold should feel like energy emitted from the brand red.
+Behavior: always anchor the gradient in IM8 Red. The yellow-gold should feel like light emitted at the endpoint, never like the dominant brand color. This gradient is a product expression inside the wider brand, not a redefinition of the identity.[12]
 
 Use white over the red-orange region and `#1A0205` over the apricot-gold region.
 
-## Gradient frequency
+## Gradient hierarchy
 
-| Gradient | Frequency |
-|---|---:|
-| Cool Neutral Light | Most frequent |
-| Neutral Salmon Wash | Frequent |
-| Soft Warm Light | Frequent |
-| Deep Crimson | Selective |
-| Signal Crimson | Selective |
-| Red to Salmon | Occasional |
-| Cellular Ember | Longevity-specific |
+| Gradient | Primary meaning | Frequency |
+|---|---|---:|
+| **Cool Neutral Light** | Clarity, systems, evidence | Most frequent |
+| **Neutral Salmon Wash** | People, culture, humanity | Frequent |
+| **Soft Warm Light** | Editorial warmth, photography | Frequent |
+| **Deep Crimson** | Conviction, premium brand moments | Selective |
+| **Signal Crimson** | Action, energy, campaign emphasis | Selective |
+| **Red to Salmon** | Human energy and optimism | Occasional |
+| **Cellular Ember** | Longevity product world | Product-specific |
 
 Do not place gradients inside every card. Use them as section fields, emotional transitions, campaign punctuation, or product-world signals.
+
+## Gradient usage rules
+
+- **Light carries proof.** Use cool neutral gradients for evidence, operations, and information density.
+- **Warmth carries people.** Use salmon-neutral and soft-warm gradients for customers, teams, and lived experience.
+- **Crimson carries conviction.** Use dark or bright red gradients when the message is decisive, branded, or action-oriented.
+- **Ember signals Longevity.** Keep orange and gold tied primarily to Longevity, cellular energy, and healthy aging.
+- **Aubergine creates depth.** Use `#2F0F12` at the dark edge of crimson fields, not as a default black background.
+- **Do not place long text over active gradients.** Put copy within a stable tonal area or on a subtle translucent panel.
+- **Do not use every gradient equally.** Light-neutral fields establish the rhythm; crimson and Longevity fields provide punctuation.
+- **Avoid gratuitous gradient animation.** Motion should reinforce energy or transformation, not make information harder to read.
+
+The central visual progression is:
+
+> **Cool clarity → human warmth → crimson conviction → cellular glow.**
+
+That gives the system range while keeping everything recognizably inside one IM8 world.
 
 ***
 
@@ -1360,3 +1446,6 @@ Reference material for the Swiss Grid System. Use these for principle, not for i
 8. Timeline Nutrition, Craftwork: https://craftwork.design/curated/website/timeline-nutrition
 9. Timeline launches first national campaign, "It's About Time": https://www.timeline.com/blog/timeline-launches-first-national-campaign-it-s-about-time
 10. Seed Health brand assets, Brandfetch: https://brandfetch.com/seed.com
+11. WCAG 2.1, Understanding Success Criterion 1.4.3: Contrast (Minimum): https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html
+12. IM8 Daily Ultimate Longevity product page: https://im8health.com/products/longevity
+13. IM8 Health homepage: https://im8health.com/
