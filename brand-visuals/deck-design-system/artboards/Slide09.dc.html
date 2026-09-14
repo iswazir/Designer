@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  :root { --fire:#D50024; --signal:#BF0016; --red:#A40011; --burg:#50000B; --aub:#2F0F12; --ink:#1A0205; --muted:#6B4A4F; --ember:#E85B4A; --salmon:#FF9693; --salmon-t:#FF8A78; --neutral:#F7F7F5; --mist:#F2F4F5; --porcelain:#F6F3F1; --blush:#F5EAEA; --gold:#D4A84B; --apricot:#F2C45B; }
+  .slide { width:1920px; height:1080px; position:relative; padding:80px; font-family:'Inter',sans-serif; color:var(--ink); display:flex; flex-direction:column; }
+  .eyebrow { font-family:'DM Mono',monospace; font-size:14px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; color:var(--red); }
+  .title { font-family:'Fraunces',serif; font-weight:400; font-size:58px; line-height:1.02; letter-spacing:-0.02em; color:var(--burg); }
+  .title .em { color:var(--red); font-style:italic; }
+  .title-ed { font-family:'Fraunces',serif; font-weight:400; font-size:60px; line-height:1.02; letter-spacing:-0.02em; color:var(--burg); }
+  .sub { font-weight:300; font-size:24px; line-height:1.4; color:var(--muted); }
+  .hdr { display:flex; flex-direction:column; gap:14px; max-width:1165px; }
+  .standfirst { font-weight:300; font-size:24px; line-height:1.4; color:var(--muted); max-width:900px; margin-top:6px; }
+  .content { flex:1; display:flex; flex-direction:column; justify-content:center; gap:72px; }
+  .logo { position:absolute; top:76px; right:80px; font-family:'Inter',sans-serif; font-weight:500; font-size:22px; letter-spacing:0.04em; color:var(--burg); display:flex; align-items:center; gap:6px; }
+  .logo::after { content:''; width:7px; height:7px; border-radius:50%; background:var(--ember); }
+  .logo-light { color:#FFFFFF; }
+  .body { font-weight:400; font-size:18px; line-height:1.5; color:var(--ink); }
+  .muted { color:var(--muted); }
+  .mono { font-family:'DM Mono',monospace; font-size:14px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; }
+  .mono-sm { font-family:'DM Mono',monospace; font-size:12px; font-weight:400; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); }
+  .card-title { font-weight:500; font-size:22px; line-height:1.2; color:var(--burg); }
+  .card { background:#FFFFFF; border:1px solid rgba(80,0,11,0.10); border-radius:20px; box-shadow:0 8px 28px rgba(47,15,18,0.05); padding:28px; display:flex; flex-direction:column; gap:12px; }
+  .card-proof { background:#50000B; border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:28px; color:#FFFFFF; display:flex; flex-direction:column; gap:12px; }
+  .card-hi { background:linear-gradient(135deg,#8A000E 0%,#A40011 58%,#D50024 100%); border:1px solid rgba(255,255,255,0.18); border-radius:20px; box-shadow:0 16px 38px rgba(164,0,17,0.18); padding:28px; color:#FFFFFF; display:flex; flex-direction:column; gap:12px; }
+  .glass-light { background:rgba(255,255,255,0.68); border:1px solid rgba(255,255,255,0.72); backdrop-filter:blur(18px) saturate(115%); -webkit-backdrop-filter:blur(18px) saturate(115%); border-radius:24px; box-shadow:0 12px 36px rgba(47,15,18,0.08); padding:28px; display:flex; flex-direction:column; gap:12px; }
+  .glass-dark { background:rgba(26,2,5,0.28); border:1px solid rgba(255,255,255,0.18); backdrop-filter:blur(18px) saturate(120%); -webkit-backdrop-filter:blur(18px) saturate(120%); border-radius:24px; box-shadow:0 16px 42px rgba(26,2,5,0.20); padding:28px; color:#FFFFFF; display:flex; flex-direction:column; gap:12px; }
+  .tag { display:inline-flex; align-self:flex-start; align-items:center; padding:6px 12px; border-radius:999px; font-family:'DM Mono',monospace; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; white-space:nowrap; line-height:1.2; }
+  .tag-evidence { background:#50000B; color:#FFFFFF; }
+  .tag-human { background:#E85B4A; color:#1A0205; }
+  .tag-longevity { background:#F2C45B; color:#1A0205; }
+  .tag-outline { border:1px solid rgba(80,0,11,0.25); color:#6B4A4F; }
+  .tag-outline-dark { border:1px solid rgba(255,255,255,0.32); color:#FFFFFF; }
+  .btn { display:inline-flex; align-self:flex-start; align-items:center; padding:14px 22px; border-radius:999px; background:#A40011; color:#FFFFFF; font-weight:500; font-size:17px; white-space:nowrap; }
+  .btn-secondary { background:transparent; border:1px solid #50000B; color:#50000B; }
+  .rule { height:1px; background:rgba(80,0,11,0.10); }
+  .rule-gold { height:1px; background:rgba(212,168,75,0.55); }
+  .footer { position:absolute; left:80px; right:80px; bottom:36px; display:flex; justify-content:space-between; align-items:baseline; font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:#6B4A4F; }
+  .g-deep { background:linear-gradient(135deg,#2F0F12 0%,#50000B 48%,#A40011 100%); }
+  .g-signal { background:linear-gradient(135deg,#8A000E 0%,#A40011 55%,#D50024 100%); }
+  .g-salmon { background:linear-gradient(120deg,#A40011 0%,#D50024 48%,#FF9693 100%); }
+  .g-wash { background:linear-gradient(135deg,#F2F4F5 0%,#F5EAEA 55%,#FFF1EE 100%); }
+  .g-cool { background:linear-gradient(135deg,#F2F4F5 0%,#F7F7F5 55%,#FFFFFF 100%); }
+  .g-warm { background:linear-gradient(135deg,#F6F3F1 0%,#F7F7F5 60%,#FFFFFF 100%); }
+  .g-ember { background:linear-gradient(110deg,#A40011 0%,#E85B3F 32%,#EF7745 58%,#F2A05A 78%,#F2C45B 100%); }
+  .metric { font-weight:500; white-space:nowrap; font-size:50px; line-height:1; letter-spacing:-0.01em; color:var(--red); }
+  .icon { width:24px; height:24px; }
+  .on-red { color:#FFFFFF; }
+  .on-red .eyebrow { color:var(--salmon); }
+  .on-red .title { color:#FFFFFF; }
+  .on-red .title .em { color:var(--salmon); }
+  .on-red .standfirst { color:rgba(255,255,255,0.82); }
+  .on-red .footer { color:rgba(255,255,255,0.7); }
+  .on-red .logo { color:#FFFFFF; }
+  .index-num { font-family:'DM Mono',monospace; font-weight:400; font-size:220px; line-height:0.9; letter-spacing:-0.04em; }
+  .row-table { display:grid; border-top:1px solid rgba(80,0,11,0.18); }
+  .row-table > div { padding:14px 12px 14px 0; border-bottom:1px solid rgba(80,0,11,0.10); font-size:16px; line-height:1.4; }
+  .wire { border:1px solid rgba(80,0,11,0.18); border-radius:12px; background:#FFFFFF; padding:10px; display:grid; gap:6px; height:150px; }
+  .wire .b { background:rgba(80,0,11,0.08); border-radius:4px; }
+  .wire .h { background:rgba(80,0,11,0.35); border-radius:4px; }
+  .wire .r { background:linear-gradient(135deg,#8A000E,#D50024); border-radius:4px; }
+  .wire .i { background:linear-gradient(120deg,#A40011,#FF9693); border-radius:4px; }
+  .wire.r { background:linear-gradient(135deg,#8A000E,#D50024); border:none; }
+  .num { font-family:'Inter',sans-serif; font-weight:300; font-size:34px; line-height:1; color:var(--red); letter-spacing:-0.01em; }
+  .vcol { padding:0 28px; border-left:1px solid rgba(80,0,11,0.14); display:flex; flex-direction:column; gap:14px; }
+  .vcol-dark { border-left:1px solid rgba(255,255,255,0.14); }
+  .tab { padding:0 0 12px 0; font-family:'Inter',sans-serif; font-size:17px; font-weight:400; color:var(--muted); border-bottom:1px solid rgba(80,0,11,0.14); }
+  .tab.on { color:var(--burg); font-weight:500; border-bottom:2px solid var(--ember); }
+  .portrait { width:96px; height:96px; border-radius:50%; overflow:hidden; }
+  .ico { width:40px; height:40px; stroke:var(--burg); fill:none; stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round; }
+  .tl { position:relative; padding-left:34px; display:flex; flex-direction:column; gap:22px; }
+  .tl::before { content:''; position:absolute; left:6px; top:8px; bottom:8px; width:1px; background:rgba(80,0,11,0.18); }
+  .tl .dot { position:absolute; left:-34px; top:6px; width:13px; height:13px; border-radius:50%; background:#FFFFFF; border:1.5px solid var(--burg); }
+  .tl .dot.on { background:var(--ember); border-color:var(--ember); }
+  .quote { font-family:'Fraunces',serif; font-weight:400; font-size:26px; line-height:1.3; letter-spacing:-0.01em; color:var(--burg); }
+
+</style>
+</helmet>
+<style>.s9 .row-table > div{padding:9px 12px 9px 0; font-size:15px;} .s9 .raci > div{padding:11px 12px 11px 0; font-size:16px;}</style>
+<div class="slide g-warm s9">
+  <!-- Three panels + full-grid table: photos in cols 1–4 and 9–12, handoff card cols 5–8, RACI across 12 -->
+  <div class="logo">IM8</div>
+  <div class="hdr">
+    <div class="eyebrow">04 &middot; The Team</div>
+    <div class="title">Follow the Sun. <span class="em">Keep Judgment Close.</span></div>
+    <div class="standfirst">The same asset, two time zones, one record. The diagnosis writes the org chart.</div>
+  </div>
+  <div class="content" style="gap:28px;">
+    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:24px; height:340px;">
+      <div class="g-salmon" style="border-radius:20px; position:relative; overflow:hidden;">
+        <div class="glass-dark" style="position:absolute; left:16px; right:16px; bottom:16px; padding:14px 18px; gap:4px; border-radius:16px;"><div class="mono" style="color:var(--salmon); font-size:12px;">7:00 PM MDT &middot; El Paso</div><div class="body" style="color:#FFFFFF; font-size:15px;">Editor finishing a cut, facing right, warm evening light.</div></div>
+      </div>
+      <div class="card" style="padding:22px 26px; gap:8px;">
+        <div class="mono muted">Handoff card</div>
+        <div class="row-table" style="grid-template-columns: 90px 1fr;">
+          <div class="mono-sm">Asset</div><div>Hero 9:16</div>
+          <div class="mono-sm">Version</div><div>V4</div>
+          <div class="mono-sm">Status</div><div>Gate 2</div>
+          <div class="mono-sm">Owner</div><div>Adaptation</div>
+          <div class="mono-sm">Source</div><div>2291</div>
+        </div>
+        <div style="flex:1;"></div>
+        <span class="tag tag-human">Unresolved &middot; UK qualifier</span>
+      </div>
+      <div class="g-wash" style="border-radius:20px; border:1px solid rgba(80,0,11,0.10); position:relative; overflow:hidden;">
+        <div class="glass-light" style="position:absolute; left:16px; right:16px; bottom:16px; padding:14px 18px; gap:4px; border-radius:16px;"><div class="mono" style="color:var(--red); font-size:12px;">9:00 AM HKT &middot; Hong Kong, next day</div><div class="body" style="font-size:15px;">Teammate picking up the same asset, facing left, cool morning light.</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="mono" style="color:var(--red); margin-bottom:12px;">Who decides &middot; RACI</div>
+      <div class="row-table raci" style="grid-template-columns: 1.2fr 1fr 1.2fr 1fr;">
+        <div class="body">Brand direction, portfolio priority</div><div class="body" style="font-weight:500; color:var(--burg);">Head of Content</div>
+        <div class="body">Creative hypothesis and brief</div><div class="body" style="font-weight:500; color:var(--burg);">Performance Creative Lead</div>
+        <div class="body">Masters and derivatives</div><div class="body" style="font-weight:500; color:var(--burg);">Lead Editor</div>
+        <div class="body">Claims and regulatory sign-off</div><div class="body" style="font-weight:500; color:var(--burg);">Legal / Science</div>
+        <div class="body">Talent use and rights</div><div class="body" style="font-weight:500; color:var(--burg);">Talent / Legal, HoC informed</div>
+        <div class="body">Media setup, in-threshold bidding</div><div class="body" style="font-weight:500; color:var(--burg);">HK Media Buyer</div>
+        <div class="body" style="grid-column: 1;">Performance read, next-test call</div><div class="body" style="font-weight:500; color:var(--burg); grid-column: 2 / span 3;">Performance Creative Lead + HK Media Buyer jointly &middot; Head of Content breaks ties</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>The Team &middot; global rhythm</span><span>09 / 12</span></div>
+</div>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  :root { --fire:#D50024; --signal:#BF0016; --red:#A40011; --burg:#50000B; --aub:#2F0F12; --ink:#1A0205; --muted:#6B4A4F; --ember:#E85B4A; --salmon:#FF9693; --salmon-t:#FF8A78; --neutral:#F7F7F5; --mist:#F2F4F5; --porcelain:#F6F3F1; --blush:#F5EAEA; --gold:#D4A84B; --apricot:#F2C45B; }
+  .slide { width:1920px; height:1080px; position:relative; padding:80px; font-family:'Inter',sans-serif; color:var(--ink); display:flex; flex-direction:column; }
+  .eyebrow { font-family:'DM Mono',monospace; font-size:14px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; color:var(--red); }
+  .title { font-family:'Fraunces',serif; font-weight:400; font-size:58px; line-height:1.02; letter-spacing:-0.02em; color:var(--burg); }
+  .title .em { color:var(--red); font-style:italic; }
+  .title-ed { font-family:'Fraunces',serif; font-weight:400; font-size:60px; line-height:1.02; letter-spacing:-0.02em; color:var(--burg); }
+  .sub { font-weight:300; font-size:24px; line-height:1.4; color:var(--muted); }
+  .hdr { display:flex; flex-direction:column; gap:14px; max-width:1165px; }
+  .standfirst { font-weight:300; font-size:24px; line-height:1.4; color:var(--muted); max-width:900px; margin-top:6px; }
+  .content { flex:1; display:flex; flex-direction:column; justify-content:center; gap:72px; }
+  .logo { position:absolute; top:76px; right:80px; font-family:'Inter',sans-serif; font-weight:500; font-size:22px; letter-spacing:0.04em; color:var(--burg); display:flex; align-items:center; gap:6px; }
+  .logo::after { content:''; width:7px; height:7px; border-radius:50%; background:var(--ember); }
+  .logo-light { color:#FFFFFF; }
+  .body { font-weight:400; font-size:18px; line-height:1.5; color:var(--ink); }
+  .muted { color:var(--muted); }
+  .mono { font-family:'DM Mono',monospace; font-size:14px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; }
+  .mono-sm { font-family:'DM Mono',monospace; font-size:12px; font-weight:400; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); }
+  .card-title { font-weight:500; font-size:22px; line-height:1.2; color:var(--burg); }
+  .card { background:#FFFFFF; border:1px solid rgba(80,0,11,0.10); border-radius:20px; box-shadow:0 8px 28px rgba(47,15,18,0.05); padding:28px; display:flex; flex-direction:column; gap:12px; }
+  .card-proof { background:#50000B; border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:28px; color:#FFFFFF; display:flex; flex-direction:column; gap:12px; }
+  .card-hi { background:linear-gradient(135deg,#8A000E 0%,#A40011 58%,#D50024 100%); border:1px solid rgba(255,255,255,0.18); border-radius:20px; box-shadow:0 16px 38px rgba(164,0,17,0.18); padding:28px; color:#FFFFFF; display:flex; flex-direction:column; gap:12px; }
+  .glass-light { background:rgba(255,255,255,0.68); border:1px solid rgba(255,255,255,0.72); backdrop-filter:blur(18px) saturate(115%); -webkit-backdrop-filter:blur(18px) saturate(115%); border-radius:24px; box-shadow:0 12px 36px rgba(47,15,18,0.08); padding:28px; display:flex; flex-direction:column; gap:12px; }
+  .glass-dark { background:rgba(26,2,5,0.28); border:1px solid rgba(255,255,255,0.18); backdrop-filter:blur(18px) saturate(120%); -webkit-backdrop-filter:blur(18px) saturate(120%); border-radius:24px; box-shadow:0 16px 42px rgba(26,2,5,0.20); padding:28px; color:#FFFFFF; display:flex; flex-direction:column; gap:12px; }
+  .tag { display:inline-flex; align-self:flex-start; align-items:center; padding:6px 12px; border-radius:999px; font-family:'DM Mono',monospace; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; white-space:nowrap; line-height:1.2; }
+  .tag-evidence { background:#50000B; color:#FFFFFF; }
+  .tag-human { background:#E85B4A; color:#1A0205; }
+  .tag-longevity { background:#F2C45B; color:#1A0205; }
+  .tag-outline { border:1px solid rgba(80,0,11,0.25); color:#6B4A4F; }
+  .tag-outline-dark { border:1px solid rgba(255,255,255,0.32); color:#FFFFFF; }
+  .btn { display:inline-flex; align-self:flex-start; align-items:center; padding:14px 22px; border-radius:999px; background:#A40011; color:#FFFFFF; font-weight:500; font-size:17px; white-space:nowrap; }
+  .btn-secondary { background:transparent; border:1px solid #50000B; color:#50000B; }
+  .rule { height:1px; background:rgba(80,0,11,0.10); }
+  .rule-gold { height:1px; background:rgba(212,168,75,0.55); }
+  .footer { position:absolute; left:80px; right:80px; bottom:36px; display:flex; justify-content:space-between; align-items:baseline; font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:#6B4A4F; }
+  .g-deep { background:linear-gradient(135deg,#2F0F12 0%,#50000B 48%,#A40011 100%); }
+  .g-signal { background:linear-gradient(135deg,#8A000E 0%,#A40011 55%,#D50024 100%); }
+  .g-salmon { background:linear-gradient(120deg,#A40011 0%,#D50024 48%,#FF9693 100%); }
+  .g-wash { background:linear-gradient(135deg,#F2F4F5 0%,#F5EAEA 55%,#FFF1EE 100%); }
+  .g-cool { background:linear-gradient(135deg,#F2F4F5 0%,#F7F7F5 55%,#FFFFFF 100%); }
+  .g-warm { background:linear-gradient(135deg,#F6F3F1 0%,#F7F7F5 60%,#FFFFFF 100%); }
+  .g-ember { background:linear-gradient(110deg,#A40011 0%,#E85B3F 32%,#EF7745 58%,#F2A05A 78%,#F2C45B 100%); }
+  .metric { font-weight:500; white-space:nowrap; font-size:50px; line-height:1; letter-spacing:-0.01em; color:var(--red); }
+  .icon { width:24px; height:24px; }
+  .on-red { color:#FFFFFF; }
+  .on-red .eyebrow { color:var(--salmon); }
+  .on-red .title { color:#FFFFFF; }
+  .on-red .title .em { color:var(--salmon); }
+  .on-red .standfirst { color:rgba(255,255,255,0.82); }
+  .on-red .footer { color:rgba(255,255,255,0.7); }
+  .on-red .logo { color:#FFFFFF; }
+  .index-num { font-family:'DM Mono',monospace; font-weight:400; font-size:220px; line-height:0.9; letter-spacing:-0.04em; }
+  .row-table { display:grid; border-top:1px solid rgba(80,0,11,0.18); }
+  .row-table > div { padding:14px 12px 14px 0; border-bottom:1px solid rgba(80,0,11,0.10); font-size:16px; line-height:1.4; }
+  .wire { border:1px solid rgba(80,0,11,0.18); border-radius:12px; background:#FFFFFF; padding:10px; display:grid; gap:6px; height:150px; }
+  .wire .b { background:rgba(80,0,11,0.08); border-radius:4px; }
+  .wire .h { background:rgba(80,0,11,0.35); border-radius:4px; }
+  .wire .r { background:linear-gradient(135deg,#8A000E,#D50024); border-radius:4px; }
+  .wire .i { background:linear-gradient(120deg,#A40011,#FF9693); border-radius:4px; }
+  .wire.r { background:linear-gradient(135deg,#8A000E,#D50024); border:none; }
+  .num { font-family:'Inter',sans-serif; font-weight:300; font-size:34px; line-height:1; color:var(--red); letter-spacing:-0.01em; }
+  .vcol { padding:0 28px; border-left:1px solid rgba(80,0,11,0.14); display:flex; flex-direction:column; gap:14px; }
+  .vcol-dark { border-left:1px solid rgba(255,255,255,0.14); }
+  .tab { padding:0 0 12px 0; font-family:'Inter',sans-serif; font-size:17px; font-weight:400; color:var(--muted); border-bottom:1px solid rgba(80,0,11,0.14); }
+  .tab.on { color:var(--burg); font-weight:500; border-bottom:2px solid var(--ember); }
+  .portrait { width:96px; height:96px; border-radius:50%; overflow:hidden; }
+  .ico { width:40px; height:40px; stroke:var(--burg); fill:none; stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round; }
+  .tl { position:relative; padding-left:34px; display:flex; flex-direction:column; gap:22px; }
+  .tl::before { content:''; position:absolute; left:6px; top:8px; bottom:8px; width:1px; background:rgba(80,0,11,0.18); }
+  .tl .dot { position:absolute; left:-34px; top:6px; width:13px; height:13px; border-radius:50%; background:#FFFFFF; border:1.5px solid var(--burg); }
+  .tl .dot.on { background:var(--ember); border-color:var(--ember); }
+  .quote { font-family:'Fraunces',serif; font-weight:400; font-size:26px; line-height:1.3; letter-spacing:-0.01em; color:var(--burg); }
+
+</style>
+</helmet>
+<div class="slide g-warm" style="height:1760px; gap:64px;">
+  <div class="logo">IM8</div>
+  <div class="hdr">
+    <div class="eyebrow">Components A &middot; floating text, icons, tabs</div>
+    <div class="title">Structure Without Boxes. <span class="em">Cards Only Where They Earn It.</span></div>
+    <div class="standfirst">Three modules from the references, rebuilt in the system with real deck content. Hairlines and numbers do the organising; the card is reserved for the one thing that needs holding.</div>
+  </div>
+
+  <!-- A1 numbered floating columns with vertical hairlines -->
+  <div style="display:flex; flex-direction:column; gap:20px;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+      <div class="mono-sm">A1 &middot; Numbered columns on hairlines &middot; no cards</div>
+      <div style="font-family:'Inter',sans-serif; font-size:16px; font-weight:500; color:var(--burg);">See the intake template &nbsp;&rarr;</div>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr);">
+      <div class="vcol"><div class="num">01</div><div class="card-title" style="font-size:26px;">Launch Brief</div><div class="body muted" style="font-size:16px;">Creates the source family. Decides markets, rights and the claim route.</div><div class="mono-sm">Owner &middot; Integrated Producer</div></div>
+      <div class="vcol"><div class="num">02</div><div class="card-title" style="font-size:26px;">Performance Sprint</div><div class="body muted" style="font-size:16px;">Creates one learning decision. Decides the variable and the threshold.</div><div class="mono-sm">Owners &middot; Performance + Media</div></div>
+      <div class="vcol"><div class="num">03</div><div class="card-title" style="font-size:26px;">Multi-Channel Request</div><div class="body muted" style="font-size:16px;">Creates a ready-to-run version. Decides parent, market, risk and destination.</div><div class="mono-sm">Owner &middot; Creative Operations</div></div>
+    </div>
+  </div>
+
+  <!-- A2 icon principles with photo strip and metadata footer -->
+  <div style="display:flex; flex-direction:column; gap:20px;">
+    <div class="mono-sm">A2 &middot; Principles &middot; number, line icon, title, body &middot; photo strip above, metadata below</div>
+    <div style="display:grid; grid-template-columns: 422px 24px 1fr; align-items:end;">
+      <div><div class="title" style="font-size:40px;">Four rules <span class="em">the machine keeps.</span></div><div class="body muted" style="margin-top:12px; font-size:16px;">Structured intake. Measured release.</div></div>
+      <div></div>
+      <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px;">
+        <div class="g-salmon" style="height:150px; border-radius:14px;"></div>
+        <div class="g-signal" style="height:150px; border-radius:14px;"></div>
+        <div class="g-wash" style="height:150px; border-radius:14px; border:1px solid rgba(80,0,11,0.10);"></div>
+        <div class="g-deep" style="height:150px; border-radius:14px;"></div>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:24px; padding-top:8px;">
+      <div style="display:flex; flex-direction:column; gap:12px;"><div class="mono" style="color:var(--ink);">01</div><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg><div class="card-title" style="font-size:20px;">A request is not a brief</div><div class="body muted" style="font-size:15px;">Owner, outcome, source, risk and route, or it does not start.</div></div>
+      <div style="display:flex; flex-direction:column; gap:12px;"><div class="mono" style="color:var(--ink);">02</div><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><div class="card-title" style="font-size:20px;">Judgment scales, approval doesn't</div><div class="body muted" style="font-size:15px;">Review depth follows consequence, not seniority.</div></div>
+      <div style="display:flex; flex-direction:column; gap:12px;"><div class="mono" style="color:var(--ink);">03</div><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 15l6-6M10.5 9H15v4.5"/></svg><div class="card-title" style="font-size:20px;">Nothing is cleared twice</div><div class="body muted" style="font-size:15px;">One master, everything downstream joined to it.</div></div>
+      <div style="display:flex; flex-direction:column; gap:12px;"><div class="mono" style="color:var(--ink);">04</div><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l7.8 4.5v9L12 21l-7.8-4.5v-9z"/><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5V6M12 18v-3.5M9.8 10.8L6.9 9.1M17.1 14.9l-2.9-1.7M9.8 13.2l-2.9 1.7M17.1 9.1l-2.9 1.7"/></svg><div class="card-title" style="font-size:20px;">Humans decide meaning</div><div class="body muted" style="font-size:15px;">AI retrieves, joins, flags and drafts. A person owns the call.</div></div>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:24px; border-top:1px solid rgba(80,0,11,0.14); padding-top:16px; align-items:end;">
+      <div><div style="width:40px; height:2px; background:var(--ember); margin-bottom:10px;"></div><div class="mono" style="color:var(--burg);">Built for evidence,<br>not applause.</div></div>
+      <div><div class="mono-sm">Following</div><div class="body" style="font-size:15px; margin-top:4px;">One asset record</div></div>
+      <div><div class="mono-sm">Cadence</div><div class="body" style="font-size:15px; margin-top:4px;">Daily &middot; Weekly &middot; Monthly</div></div>
+      <div><div class="mono-sm">Focus</div><div class="body" style="font-size:15px; margin-top:4px;">Revenue. Learning. Memory.</div></div>
+    </div>
+  </div>
+
+  <!-- A3 floating text + tabs beside a dark image-top card -->
+  <div style="display:flex; flex-direction:column; gap:20px;">
+    <div class="mono-sm">A3 &middot; Floating text with tab navigation &middot; one dark image-top card with a button</div>
+    <div style="display:grid; grid-template-columns: 1fr 149px 719px; align-items:stretch;">
+      <div style="display:flex; flex-direction:column;">
+        <div class="mono" style="color:var(--red);">Risk lanes</div>
+        <div class="title" style="font-size:44px; margin-top:12px;">One loop. <span class="em">Three speeds.</span></div>
+        <div class="body muted" style="font-size:17px; margin-top:16px; max-width:640px;">We don't add reviewers to feel safe. We route work by what it could cost if it is wrong, and let the known territory move at the speed of the editor.</div>
+        <div style="flex:1;"></div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:24px; max-width:720px;">
+          <div class="tab">Green &middot; same day</div><div class="tab on">Amber &middot; 24 hours</div><div class="tab">Red &middot; 48&ndash;72 hours</div>
+        </div>
+      </div>
+      <div></div>
+      <div class="card-proof" style="padding:0; overflow:hidden; gap:0; background:var(--aub);">
+        <div class="g-salmon" style="height:280px; position:relative;"><span class="tag tag-outline-dark" style="position:absolute; left:20px; top:20px; background:rgba(26,2,5,0.35);">Amber lane</span></div>
+        <div style="padding:26px 28px 28px 28px; display:flex; flex-direction:column; gap:12px;">
+          <div style="font-family:'Fraunces',serif; font-weight:400; font-size:26px; line-height:1.15; color:#FFFFFF;">New execution of an approved claim</div>
+          <div class="body" style="font-size:16px; color:rgba(255,255,255,0.82);">A first creator format, a new framing of a cleared claim, a fresh cut of a master. A senior editor or channel owner calibrates it inside a day.</div>
+          <div style="display:flex; align-items:center; gap:0; margin-top:6px;"><span style="display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; background:rgba(255,255,255,0.14); border-radius:10px 0 0 10px; color:#FFFFFF;">&rarr;</span><span class="btn" style="border-radius:0 10px 10px 0; padding:12px 20px; font-size:16px;">Open the Amber checklist</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Components A</span><span>Reference</span></div>
+</div>
+
+</x-dc>
+</body>
+</html>
