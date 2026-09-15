@@ -1,0 +1,249 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "01 Thesis"
+    },
+    {
+      "file": "Slide02.dc.html",
+      "x": 2020,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "02 Intake"
+    },
+    {
+      "file": "Slide03.dc.html",
+      "x": 4040,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "03 Team"
+    },
+    {
+      "file": "Slide04.dc.html",
+      "x": 6060,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "04 Gates"
+    },
+    {
+      "file": "Slide05.dc.html",
+      "x": 8080,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "05 Tiers + SLA"
+    },
+    {
+      "file": "Slide06.dc.html",
+      "x": 10100,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "06 AI receipts"
+    },
+    {
+      "file": "Slide07.dc.html",
+      "x": 12120,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "07 Ontology"
+    },
+    {
+      "file": "Slide08.dc.html",
+      "x": 14140,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "08 Learning"
+    },
+    {
+      "file": "Slide09.dc.html",
+      "x": 16160,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "09 Global rhythm"
+    },
+    {
+      "file": "Slide10.dc.html",
+      "x": 18180,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "10 Creative I"
+    },
+    {
+      "file": "Slide11.dc.html",
+      "x": 20200,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "11 Creative II"
+    },
+    {
+      "file": "Slide12.dc.html",
+      "x": 22220,
+      "y": 0,
+      "w": 1920,
+      "h": 1080,
+      "title": "12 Close"
+    },
+    {
+      "file": "System.dc.html",
+      "x": 0,
+      "y": 1220,
+      "w": 1920,
+      "h": 1240,
+      "title": "System"
+    },
+    {
+      "file": "Layouts.dc.html",
+      "x": 2020,
+      "y": 1220,
+      "w": 1920,
+      "h": 1080,
+      "title": "Layouts"
+    },
+    {
+      "file": "ComponentsA.dc.html",
+      "x": 4040,
+      "y": 1220,
+      "w": 1920,
+      "h": 1760,
+      "title": "Components A"
+    },
+    {
+      "file": "ComponentsB.dc.html",
+      "x": 6060,
+      "y": 1220,
+      "w": 1920,
+      "h": 1440,
+      "title": "Components B"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "n-Main",
+      "x": 0,
+      "y": -90,
+      "w": 1920,
+      "text": "01 — Editorial Split, full-height image bleed."
+    },
+    {
+      "id": "n-Slide02",
+      "x": 2020,
+      "y": -90,
+      "w": 1920,
+      "text": "02 — Swiss Index on a Signal Crimson field (IM8 Red → Fire). Three white editorial cards on red."
+    },
+    {
+      "id": "n-Slide03",
+      "x": 4040,
+      "y": -90,
+      "w": 1920,
+      "text": "03 — Four-up + band. Soft Warm Light."
+    },
+    {
+      "id": "n-Slide04",
+      "x": 6060,
+      "y": -90,
+      "w": 1920,
+      "text": "04 — Sidebar + Grid (3/9). Four stage cards, two Burgundy gate cards, one image module."
+    },
+    {
+      "id": "n-Slide05",
+      "x": 8080,
+      "y": -90,
+      "w": 1920,
+      "text": "05 — Content-heavy on a red field: SLA rows as white cards, one dark-glass example."
+    },
+    {
+      "id": "n-Slide06",
+      "x": 10100,
+      "y": -90,
+      "w": 1920,
+      "text": "06 — Evidence Field. Owned rows carded, one proof card."
+    },
+    {
+      "id": "n-Slide07",
+      "x": 12120,
+      "y": -90,
+      "w": 1920,
+      "text": "07 — Metrics on gold hairlines, ontology chain, Master highlighted."
+    },
+    {
+      "id": "n-Slide08",
+      "x": 14140,
+      "y": -90,
+      "w": 1920,
+      "text": "08 — Two-thirds / one-third: matrix + signal chain, cadence rail on a gold hairline."
+    },
+    {
+      "id": "n-Slide09",
+      "x": 16160,
+      "y": -90,
+      "w": 1920,
+      "text": "09 — Panels + full-grid RACI table."
+    },
+    {
+      "id": "n-Slide10",
+      "x": 18180,
+      "y": -90,
+      "w": 1920,
+      "text": "10 — Photo-top card beside a Deep Crimson field."
+    },
+    {
+      "id": "n-Slide11",
+      "x": 20200,
+      "y": -90,
+      "w": 1920,
+      "text": "11 — Modular cards, image in the first slot."
+    },
+    {
+      "id": "n-Slide12",
+      "x": 22220,
+      "y": -90,
+      "w": 1920,
+      "text": "12 — The single Deep Crimson climax."
+    },
+    {
+      "id": "nsys",
+      "x": 0,
+      "y": 1130,
+      "w": 1920,
+      "text": "System — palette, gradients, cards, tags, type. Arizona at light weight."
+    },
+    {
+      "id": "nlay",
+      "x": 2020,
+      "y": 1130,
+      "w": 1920,
+      "text": "Layouts — eight content-heavy families on the 12-column grid, each mapped to a slide."
+    },
+    {
+      "id": "ncA",
+      "x": 4040,
+      "y": 1130,
+      "w": 1920,
+      "text": "Components A — numbered hairline columns, icon principles with photo strip + metadata footer, floating text with tabs beside a dark image-top card."
+    },
+    {
+      "id": "ncB",
+      "x": 6060,
+      "y": 1130,
+      "w": 1920,
+      "text": "Components B — dark field with numbered columns + light stat/portrait band, portrait + quote + hairline list, vertical timeline."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}
