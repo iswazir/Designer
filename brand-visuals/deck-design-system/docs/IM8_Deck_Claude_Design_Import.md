@@ -83,7 +83,7 @@ Palette: cream/oxblood base (#FBF3EC-ish warm white, deep maroon #3A0E12-ish, ch
 - Lead calibrates: new framing · broader consequence
 - Expert clears: new claim · material risk
 **Closing line:** Say it where the evidence carries it. Show it where it doesn't.
-**Side panel example ("Scene, not line"):** "The word ~~takes longer to arrive~~." → "Reads as a cognitive-decline implication. No approved route carries it." → "Scene, not line. A pause before a word in a meeting. Nothing said." Image note: full-height creator ad, a person pausing mid-sentence, restrained body language, premium documentary framing.
+**Side panel example ("Scene, not line"):** "The word ~~takes longer to arrive~~." → "Reads as a cognitive-decline implication. No approved route carries it." → "Scene, not line. A pause before a word in a meeting. Nothing said." Image note: full-height creator ad, a person pausing mid-sentence, restrained body language, quiet documentary framing.
 
 **NEW — SLA table:**
 | Tier | Example | Human review | Target turnaround |

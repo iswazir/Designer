@@ -32,6 +32,10 @@ node <design-skill>/seed-canvas.mjs \
 
 `build.py` writes the `.dc.html` files into the same directory it runs from; copy them into `artboards/` after building. The seed command lists artboards in canvas order (Main, Slide02–Slide12, System, Layouts, ComponentsA, ComponentsB).
 
+## Voice
+
+All deck copy should follow `../voice/IM8_VOICE.md` — the IM8 voice guide (governing line: "Know more. Say less. Prove what you say."). Check new or edited copy against its banned-words list (Section 26) and the eight editor tests (Section 30) before calling it final.
+
 ## Slide map
 
 01 Thesis (Editorial Split, full-height image) · 02 Intake (Swiss Index on Signal Crimson) · 03 Team (four-up + band) · 04 Gates (sidebar + grid) · 05 Tiers + SLA (rows on a red field) · 06 AI receipts (Evidence Field) · 07 Ontology (metrics + chain) · 08 Learning (two-thirds / one-third) · 09 Global rhythm (panels + table) · 10 Creative I · 11 Creative II (image replaces a card) · 12 Close (the single Deep Crimson field).
